@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>On Approval</title>
+<meta name="description" content="Try it on with YouCam, take it home on approval, keep what fits.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Albert+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="mast">
+  <div class="mast-in">
+    <a class="wordmark" href="#" data-tab="shop">On Approval</a>
+    <span id="mode" class="mode"></span>
+    <nav class="tabs" aria-label="Sections">
+      <button data-tab="shop" class="on">Shop</button>
+      <button data-tab="parcel">Parcel (<span id="parcel-n" class="badge">0</span>)</button>
+      <button data-tab="mine">Approvals</button>
+      <button data-tab="ledger">Ledger</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Shop -->
+  <section id="tab-shop" class="tab on">
+    <div class="hero">
+      <h1 class="display">Try it on first. Pay for what you keep.</h1>
+      <p>Every parcel goes out on approval. See yourself in it with YouCam, pick the size from your own measurements, and decide at home.</p>
+    </div>
+    <div class="measure" id="measure">
+      <div>
+        <div class="measure-head">
+          <h2 class="display">Your measure card</h2>
+          <button class="link" id="unit-toggle" type="button">Use inches</button>
+        </div>
+        <p class="note">Four numbers, once. Every size we suggest is worked out from these and the item's size chart. Saved on this device only.</p>
+      </div>
+      <div>
+        <form id="measure-form" class="grid4">
+          <label>Chest<input name="chest" inputmode="decimal" placeholder="—"></label>
+          <label>Waist<input name="waist" inputmode="decimal" placeholder="—"></label>
+          <label>Hips<input name="hips" inputmode="decimal" placeholder="—"></label>
+          <label>Inseam<input name="inseam" inputmode="decimal" placeholder="—"></label>
+        </form>
+        <p class="unit-note">in <span id="unit-label">cm</span></p>
+      </div>
+    </div>
+    <div id="grid" class="grid"></div>
+  </section>
+
+  <!-- Item -->
+  <section id="tab-item" class="tab">
+    <button class="link back" data-tab="shop" type="button">← Back to the shop</button>
+    <div id="item"></div>
+  </section>
+
+  <!-- Parcel -->
+  <section id="tab-parcel" class="tab">
+    <h2 class="section-title display">Your parcel</h2>
+    <div id="parcel"></div>
+  </section>
+
+  <!-- Approvals -->
+  <section id="tab-mine" class="tab">
+    <h2 class="section-title display">On approval with you</h2>
+    <div id="mine"></div>
+  </section>
+
+  <!-- Ledger -->
+  <section id="tab-ledger" class="tab ledger">
+    <h2 class="section-title display">The approval ledger</h2>
+    <p class="note">For the shop. Rates are counted from real keep and return decisions; estimates are marked.</p>
+    <div id="ledger"></div>
+    <details>
+      <summary>Shop settings</summary>
+      <form id="settings-form" class="stack">
+        <label>Your usual online return rate (%)<input name="baseReturnRate" inputmode="decimal"></label>
+        <label>Approval window (days)<input name="approvalDays" inputmode="numeric"></label>
+        <button class="btn">Save settings</button>
+      </form>
+    </details>
+    <details>
+      <summary>Add an item</summary>
+      <form id="item-form" class="stack">
+        <label>Name<input name="name" required maxlength="80"></label>
+        <label>Price (USD)<input name="price" inputmode="decimal" required></label>
+        <label>Garment type
+          <select name="category">
+            <option value="auto">Let YouCam detect</option>
+            <option value="upper_body">Top</option>
+            <option value="lower_body">Bottom</option>
+            <option value="full_body">Dress / one-piece</option>
+            <option value="outer">Outerwear</option>
+            <option value="shoes">Shoes</option>
+          </select>
+        </label>
+        <label>Short description<input name="blurb" maxlength="200"></label>
+        <label>Product photo (flat lay or on a hanger, plain background)<input name="image" type="file" accept="image/*" required></label>
+        <p class="note">Uses the standard size chart; edit sizes in <code>data/store.json</code>.</p>
+        <button class="btn">Add to the shop</button>
+      </form>
+    </details>
+  </section>
+</main>
+
+<footer class="foot"><span>Try-on by YouCam API (Perfect Corp.)</span><span>On Approval · built by Rav3n</span></footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="/app.js" type="module"></script>
+</body>
+</html>

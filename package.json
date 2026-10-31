@@ -1,0 +1,10 @@
+{
+  "name": "on-approval",
+  "version": "1.0.0",
+  "description": "Try it on with YouCam, take it home on approval, keep what fits.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Rav3n",
+  "engines": { "node": ">=20" },
+  "scripts": { "start": "node src/server.mjs", "test": "node --test test/*.test.mjs" }
+}

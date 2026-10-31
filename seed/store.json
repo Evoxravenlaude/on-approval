@@ -1,0 +1,74 @@
+{
+  "settings": {
+    "shopName": "The Approval House",
+    "baseReturnRate": 0.25,
+    "approvalDays": 14,
+    "currency": "USD",
+    "defaultChart": {
+      "S": { "chest": [86, 94], "waist": [71, 79], "hips": [88, 96] },
+      "M": { "chest": [94, 102], "waist": [79, 87], "hips": [96, 104] },
+      "L": { "chest": [102, 110], "waist": [87, 95], "hips": [104, 112] },
+      "XL": { "chest": [110, 118], "waist": [95, 103], "hips": [112, 120] }
+    }
+  },
+  "items": [
+    {
+      "id": "oxford",
+      "name": "No. 14 Oxford Shirt",
+      "price": 58,
+      "category": "upper_body",
+      "img": "/img/oxford-shirt.jpg",
+      "blurb": "Blue university stripe, short sleeve, chest pocket.",
+      "chart": {
+        "S": { "chest": [86, 94], "waist": [72, 82] },
+        "M": { "chest": [94, 102], "waist": [80, 90] },
+        "L": { "chest": [102, 110], "waist": [88, 98] },
+        "XL": { "chest": [110, 118], "waist": [96, 106] }
+      }
+    },
+    {
+      "id": "chore",
+      "name": "Railway Chore Jacket",
+      "price": 124,
+      "category": "outer",
+      "img": "/img/chore-jacket.jpg",
+      "blurb": "Olive canvas, four pockets, corozo buttons. Cut roomy for layering.",
+      "chart": {
+        "S": { "chest": [84, 96] },
+        "M": { "chest": [92, 104] },
+        "L": { "chest": [100, 112] },
+        "XL": { "chest": [108, 120] }
+      }
+    },
+    {
+      "id": "field",
+      "name": "Field Trousers",
+      "price": 86,
+      "category": "lower_body",
+      "img": "/img/field-trousers.jpg",
+      "blurb": "Navy twill, straight leg, belt loops.",
+      "chart": {
+        "S": { "waist": [72, 78], "hips": [90, 96], "inseam": [76, 80] },
+        "M": { "waist": [78, 84], "hips": [96, 102], "inseam": [78, 82] },
+        "L": { "waist": [84, 90], "hips": [102, 108], "inseam": [80, 84] },
+        "XL": { "waist": [90, 96], "hips": [108, 114], "inseam": [80, 84] }
+      }
+    },
+    {
+      "id": "dress",
+      "name": "Gingham Day Dress",
+      "price": 98,
+      "category": "full_body",
+      "img": "/img/day-dress.jpg",
+      "blurb": "Terracotta gingham, belted waist, A-line skirt.",
+      "chart": {
+        "XS": { "chest": [78, 84], "waist": [60, 66], "hips": [84, 90] },
+        "S": { "chest": [84, 90], "waist": [66, 72], "hips": [90, 96] },
+        "M": { "chest": [90, 96], "waist": [72, 78], "hips": [96, 102] },
+        "L": { "chest": [96, 104], "waist": [78, 86], "hips": [102, 110] }
+      }
+    }
+  ],
+  "tryons": {},
+  "orders": []
+}

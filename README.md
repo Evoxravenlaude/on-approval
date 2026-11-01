@@ -54,7 +54,7 @@ Without `YOUCAM_API_KEY` the app runs in demo mode: the try-on returns your own 
 
 ## Merchants
 
-Ledger → *Add an item*: name, price, garment type and a product photo (flat lay or on a hanger, plain background). The catalogue ships with four illustrated sample garments; real product photos give better try-ons.
+Ledger → *Add an item*: name, price, garment type and a product photo (flat lay or on a hanger, plain background). The catalogue ships with six sample garments. Set `RESEED_ITEMS=1` once (then remove it) to replace a deployed catalogue with `seed/store.json` without losing parcels.
 
 ## Deploy (Railway)
 

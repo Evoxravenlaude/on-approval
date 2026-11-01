@@ -23,8 +23,11 @@ const TYPES = { ".html": "text/html; charset=utf-8", ".js": "text/javascript", "
 let store;
 async function load() {
   await mkdir(UP, { recursive: true });
+  const seed = JSON.parse(await readFile(join(ROOT, "seed", "store.json"), "utf8"));
   if (existsSync(STORE)) store = JSON.parse(await readFile(STORE, "utf8"));
-  else store = JSON.parse(await readFile(join(ROOT, "seed", "store.json"), "utf8"));
+  else store = seed;
+  // RESEED_ITEMS=1 replaces the catalogue with seed/store.json on boot, keeping parcels and try-ons.
+  if (process.env.RESEED_ITEMS === "1") { store.items = seed.items; store.settings = { ...seed.settings, ...store.settings }; }
   store.tryons ??= {};
   store.orders ??= [];
 }

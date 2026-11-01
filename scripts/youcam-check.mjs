@@ -8,7 +8,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const BASE = process.env.YOUCAM_BASE || "https://yce-api-01.makeupar.com";
 const KEY = process.env.YOUCAM_API_KEY;
 if (!KEY) { console.error("Set YOUCAM_API_KEY"); process.exit(1); }
-const [,, selfiePath = join(ROOT, "scripts", "sample-selfie.jpg"), garmentPath = join(ROOT, "public", "img", "oxford-shirt.jpg")] = process.argv;
+const [,, selfiePath = join(ROOT, "scripts", "sample-selfie.jpg"), garmentPath = join(ROOT, "public", "img", "plaid-flannel-shirt.jpg")] = process.argv;
 
 const H = { Authorization: `Bearer ${KEY}`, "Content-Type": "application/json" };
 async function call(method, path, body) {
